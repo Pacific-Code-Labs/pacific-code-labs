@@ -2,7 +2,7 @@ import { LanguageFlag } from "@pcl/design-system";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
-import { Menu, X, Globe, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { Logo } from "@/components/shared/Logo";
 import navigationData from "@/content/navigation.json";
 import { isLang, localizedPath, localizeHref, pathLang } from "@/lib/sections";
@@ -67,7 +67,7 @@ export function PublicNavbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href={localizedPath(lang)} className="flex items-center gap-2">
+          <Link href={localizedPath(lang)} className="flex items-center gap-2 shrink-0">
             <Logo size={36} />
             <span className="text-[#0F172A] dark:text-white font-semibold tracking-tight text-sm sm:text-base">
               Pacific Code Labs
@@ -76,7 +76,7 @@ export function PublicNavbar() {
 
           {/* Desktop nav */}
           <nav
-            className="hidden md:flex items-center gap-6"
+            className="hidden lg:flex items-center gap-6"
             data-testid="nav-links"
           >
             {[...navigationData.items]
@@ -89,7 +89,7 @@ export function PublicNavbar() {
                     key={item.href}
                     href={localizeHref(lang, item.href)}
                     aria-current={active ? "page" : undefined}
-                    className={`relative text-sm font-medium transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:rounded-full after:bg-[#2563EB] dark:after:bg-[#06B6D4] after:transition-all after:duration-300 ${
+                    className={`relative whitespace-nowrap text-sm font-medium transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:rounded-full after:bg-[#2563EB] dark:after:bg-[#06B6D4] after:transition-all after:duration-300 ${
                       active
                         ? "text-[#2563EB] dark:text-[#06B6D4] after:w-full"
                         : "text-[#475569] hover:text-[#0F172A] dark:text-white/70 dark:hover:text-white after:w-0 hover:after:w-full"
@@ -132,7 +132,7 @@ export function PublicNavbar() {
             {/* Mobile hamburger */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden p-2 rounded-lg text-[#475569] hover:text-[#0F172A] dark:text-white/60 dark:hover:text-white hover:bg-[#0F172A]/6 dark:hover:bg-white/8 transition-all"
+              className="lg:hidden p-2 rounded-lg text-[#475569] hover:text-[#0F172A] dark:text-white/60 dark:hover:text-white hover:bg-[#0F172A]/6 dark:hover:bg-white/8 transition-all"
               aria-label={t("common.toggle_menu")}
               aria-expanded={menuOpen}
               data-testid="mobile-menu-toggle"
@@ -149,7 +149,7 @@ export function PublicNavbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white/98 dark:bg-[#0F172A]/98 backdrop-blur-md border-t border-[#E2E8F0] dark:border-white/5 px-4 py-4 space-y-1">
+        <div className="lg:hidden bg-white/98 dark:bg-[#0F172A]/98 backdrop-blur-md border-t border-[#E2E8F0] dark:border-white/5 px-4 py-4 space-y-1">
           {[...navigationData.items]
             .sort((a, b) => a.order - b.order)
             .map((item) => {
