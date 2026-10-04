@@ -12,5 +12,5 @@ if [[ "$step" == all ]]; then
   bash "$root/scripts/seed-content.sh"
   bash "$root/scripts/publish-admin.sh"
 else
-  case "$step" in certificates|platform|email|backend) bash "$root/scripts/deploy-$step.sh";; seed) bash "$root/scripts/seed-content.sh";; admin) bash "$root/scripts/publish-admin.sh";; *) echo 'Unknown deployment step' >&2; exit 1;; esac
+  case "$step" in certificates|platform|email|backend|publish-role) bash "$root/scripts/deploy-$step.sh";; seed) bash "$root/scripts/seed-content.sh";; admin) bash "$root/scripts/publish-admin.sh";; *) echo 'Unknown deployment step' >&2; exit 1;; esac
 fi

@@ -28,7 +28,7 @@ Products use the canonical Tsuru, Sóköl and Ujtö̀ domains. Sóköl is marked
 
 The verified jcampos.dev SES identity is reused. SES currently runs in sandbox mode: new recipients must be verified until production access is granted. Invite with `bash scripts/invite-admin.sh EMAIL es` (or en). Cognito generates and delivers the temporary password; scripts do not print it.
 
-Admin deployment uses an environment-scoped GitHub OIDC publish role with read-only SSM configuration and access only to its hosting bucket and distribution. No AWS access keys are stored in frontend configuration.
+Admin deployment uses an environment-scoped GitHub OIDC publish role with read-only SSM configuration and access only to its hosting bucket and distribution. No AWS access keys are stored in frontend configuration. Run `bash deploy-env.sh prod publish-role` with an authenticated GitHub CLI to provision its environment-scoped role and configuration; the script resolves GitHub immutable repository subject IDs.
 
 ## Validation
 
