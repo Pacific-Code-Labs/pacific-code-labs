@@ -344,3 +344,17 @@ button:focus-visible {
 
 #page-content section .mb-16 { margin-bottom: 32px; }
 .reveal-section:focus-within { opacity: 1 !important; }
+
+@media (min-width: 901px) {
+  #page-content #how { padding-block: 32px; }
+  .process-inner { max-width: 720px; }
+  .process-inner > h2 { font-size: 32px; line-height: 1.2; margin-top: 14px; }
+  .process-card { margin-top: 24px; padding: 20px 24px; border-radius: 20px; }
+  .process-stage { margin-block: 12px; }
+  .process-center { height: 88px; }
+  .process-rings { width: 132px; height: 108px; }
+  .process-description { min-height: 100px; max-width: 560px; }
+  .process-description h3 { font-size: 20px; margin-bottom: 8px; }
+  .process-description p { line-height: 1.6; }
+  .process-progress { margin-top: 14px; }
+}
