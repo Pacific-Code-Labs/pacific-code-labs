@@ -14,8 +14,8 @@ export function RevealSection({ children }: { children: ReactNode }) {
   });
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.12, 0.87, 1],
-    [0.15, 1, 1, 0.15],
+    [0, 0.16, 0.84, 1],
+    [0, 1, 1, 0],
   );
   return (
     <motion.div

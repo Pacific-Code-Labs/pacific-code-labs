@@ -83,7 +83,7 @@ export function PublicWebsite() {
       {/* Wrapper animated on language switch (navbar stays outside so its
           fixed positioning isn't affected by the transform). */}
       <div id="page-content">
-        <HeroSection />
+        <RevealSection><HeroSection /></RevealSection>
         <RevealSection><ProductsSection /></RevealSection>
         <RevealSection><ServicesSection /></RevealSection>
         <RevealSection><ProcessSection /></RevealSection>
@@ -91,7 +91,7 @@ export function PublicWebsite() {
         <RevealSection><PhilosophySection /></RevealSection>
         <RevealSection><CaseStudiesSection /></RevealSection>
         <RevealSection><ContactFaqSection /></RevealSection>
-        <FooterSection />
+        <RevealSection><FooterSection /></RevealSection>
       </div>
     </div>
   );

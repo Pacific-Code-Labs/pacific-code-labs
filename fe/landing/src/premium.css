@@ -1,9 +1,9 @@
 .premium-hero {
   position: relative;
   overflow: hidden;
-  padding: 160px 24px 0;
+  padding: 120px 24px 0;
   background: hsl(var(--background));
-  min-height: 800px;
+  min-height: 0;
   color: hsl(var(--foreground));
 }
 .hero-inner {
@@ -107,10 +107,10 @@
 }
 .hero-proof {
   max-width: 1200px;
-  margin: 70px auto 0;
+  margin: 44px auto 0;
   display: flex;
   gap: 64px;
-  padding: 28px 0 34px;
+  padding: 22px 0 24px;
   border-top: 1px solid hsl(var(--border));
 }
 .hero-proof > div {
@@ -149,8 +149,8 @@
   opacity: 1 !important;
 }
 #page-content section:not(#hero) {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 #page-content p.text-justify {
   text-align: left;
@@ -180,7 +180,7 @@ button:focus-visible {
 }
 .process-section {
   background: hsl(var(--background));
-  padding: 100px 24px;
+  padding: 48px 24px;
 }
 .process-inner {
   max-width: 850px;
@@ -261,7 +261,7 @@ button:focus-visible {
     font-size: clamp(2.4rem, 5vw, 3.3rem);
   }
   .premium-hero {
-    padding-top: 130px;
+    padding-top: 104px;
     min-height: 0;
   }
   .hero-proof {
@@ -294,11 +294,11 @@ button:focus-visible {
     font-size: 10px;
   }
   .premium-hero {
-    padding: 120px 20px 0;
+    padding: 96px 20px 0;
   }
   #page-content section:not(#hero) {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
   .process-card {
     padding: 24px 16px;
@@ -341,3 +341,6 @@ button:focus-visible {
 .hero-proof strong svg { width: 42px; height: 28px; display: block; }
 
 .brand-highlight { background-image: linear-gradient(100deg, hsl(var(--primary)), hsl(var(--accent))); }
+
+#page-content section .mb-16 { margin-bottom: 32px; }
+.reveal-section:focus-within { opacity: 1 !important; }
