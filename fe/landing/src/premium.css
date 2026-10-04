@@ -327,13 +327,13 @@ button:focus-visible {
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
-  .service-grid > div:last-child:nth-child(2n + 1) { grid-column: 1 / -1; }
+  .balanced-card-grid > div:last-child:nth-child(2n + 1) { grid-column: 1 / -1; }
 }
 @media (min-width: 1024px) {
-  .service-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  .service-grid > div { grid-column: span 2; }
-  .service-grid[data-remainder="2"] > div:nth-last-child(-n + 2) { grid-column: span 3; }
-  .service-grid > div:last-child:nth-child(3n + 1) { grid-column: 1 / -1; }
+  .balanced-card-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .balanced-card-grid > div { grid-column: span 2; }
+  .balanced-card-grid:has(> div:last-child:nth-child(3n + 2)) > div:nth-last-child(-n + 2) { grid-column: span 3; }
+  .balanced-card-grid > div:last-child:nth-child(3n + 1) { grid-column: 1 / -1; }
 }
 
 [data-testid="lang-toggle"] svg { width: 24px !important; height: 18px !important; }

@@ -35,7 +35,7 @@ export function ServicesSection() {
         </div>
 
         {/* Services grid */}
-        <div className="service-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-6" data-count={services.length} data-remainder={services.length % 3}>
+        <div className="balanced-card-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, idx) => {
             const tr = service.translations[lang] ?? service.translations.es;
             const Icon = resolveIcon(service.iconName);

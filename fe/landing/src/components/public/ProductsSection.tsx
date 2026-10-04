@@ -40,7 +40,7 @@ export function ProductsSection() {
         </div>
 
         {/* Products grid */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="balanced-card-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product) => {
             const tr = product.translations[lang] ?? product.translations.es;
             const colors = productColors[product.id] ?? { from: "#2563EB", to: "#1d4ed8", border: "#2563EB" };
