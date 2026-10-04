@@ -62,11 +62,11 @@ export function ProductsSection() {
                   {/* Icon + name on one row, badge aligned right */}
                   <div className="flex items-center gap-4 mb-4">
                     <div
-                      className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
+                      className="w-14 h-14 rounded-2xl overflow-hidden flex items-center justify-center flex-shrink-0"
                       style={{ background: `${colors.from}15` }}
                     >
                       {product.logoUrl ? (
-                        <img src={resolveAssetUrl(product.logoUrl)} alt={tr.name} className="w-8 h-8 object-contain" />
+                        <img src={resolveAssetUrl(product.logoUrl)} alt={tr.name} className="w-full h-full object-cover" />
                       ) : (
                         <Icon className="w-7 h-7" style={{ color: colors.from }} />
                       )}
