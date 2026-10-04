@@ -1,0 +1,71 @@
+[
+  {
+    "id": "tsuru",
+    "slug": "tsuru",
+    "status": "active",
+    "sortOrder": 1,
+    "iconName": "Store",
+    "externalUrl": "https://tsuru.jcampos.dev",
+    "logoUrl": "https://cdn.pacific-code-labs.jcampos.dev/media/products/tsuru-f1c7368ce81e.png",
+    "translations": {
+      "es": {
+        "name": "Tsuru",
+        "tagline": "Comercio local con raíces comunitarias.",
+        "description": "Tsuru toma su nombre del cacao en bribri. Nació en Puntarenas en el TCU «Comer Orgánico» de la Universidad de Costa Rica, junto a la Feria del Trueque Verde Manantial de Guápiles. Hoy ayuda a organizar productos, clientes y pedidos, compartir una tienda en línea y facturar ante Hacienda con la configuración fiscal necesaria. Su visión sigue creciendo hacia las ferias digitales y el trueque."
+      },
+      "en": {
+        "name": "Tsuru",
+        "tagline": "Local commerce, rooted in community.",
+        "description": "Named after cacao in Bribri, Tsuru began in Puntarenas through the Universidad de Costa Rica’s «Comer Orgánico» community project and the Verde Manantial barter fair in Guápiles. Today it helps organize products, customers and orders, share an online store and issue Hacienda invoices with the required fiscal setup. Its vision continues toward digital fairs and barter."
+      }
+    },
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2026-10-04T00:00:00Z"
+  },
+  {
+    "id": "sokol",
+    "slug": "sokol",
+    "status": "coming-soon",
+    "sortOrder": 2,
+    "iconName": "ShieldCheck",
+    "externalUrl": "https://sokol.jcampos.dev",
+    "logoUrl": "https://cdn.pacific-code-labs.jcampos.dev/media/products/sokol-aacbe26fc8b3.png",
+    "translations": {
+      "es": {
+        "name": "Sóköl",
+        "tagline": "Protección contra incendios, NFPA Costa Rica.",
+        "description": "Sóköl reúne reglas deterministas e inteligencia artificial para orientar la interpretación de requisitos NFPA de protección contra incendios y código eléctrico en Costa Rica. Su nombre evoca el escudo y la protección. Ofrece referencias normativas y resultados estructurados para profesionales; el criterio técnico sigue en manos del especialista."
+      },
+      "en": {
+        "name": "Sóköl",
+        "tagline": "Fire protection, NFPA Costa Rica.",
+        "description": "Sóköl combines deterministic rules and AI to guide the interpretation of NFPA fire-protection requirements and the electrical code in Costa Rica. Its name evokes a shield and protection. It offers source references and structured results for professionals; technical judgment remains with the specialist."
+      }
+    },
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2026-10-04T00:00:00Z"
+  },
+  {
+    "id": "ujto",
+    "slug": "ujto",
+    "status": "active",
+    "sortOrder": 3,
+    "iconName": "FileAudio",
+    "externalUrl": "https://ujto.jcampos.dev",
+    "logoUrl": "https://cdn.pacific-code-labs.jcampos.dev/media/products/ujto-317f14834170.png",
+    "translations": {
+      "es": {
+        "name": "Ujtö̀",
+        "tagline": "Del video a la palabra.",
+        "description": "Ujtö̀ significa «palabra» e «idioma» en bribri, la lengua del pueblo bribri de Talamanca. Convierte archivos de video y audio en transcripciones con marcas de tiempo mediante el modelo abierto Whisper. Está pensado para creadores, estudiantes y profesionales que necesitan leer, guardar y compartir lo que se dijo."
+      },
+      "en": {
+        "name": "Ujtö̀",
+        "tagline": "From video to word.",
+        "description": "Ujtö̀ means “word” and “language” in Bribri, the language of the Bribri people of Talamanca. It turns uploaded video and audio into timestamped transcripts using the open-source Whisper model, helping creators, students and professionals read, keep and share what was said."
+      }
+    },
+    "createdAt": "2026-10-04T00:00:00Z",
+    "updatedAt": "2026-10-04T00:00:00Z"
+  }
+]

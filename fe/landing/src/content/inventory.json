@@ -1,0 +1,914 @@
+{
+  "generatedAt": "2026-10-04T19:21:44.573Z",
+  "counts": {
+    "nodes": 64,
+    "edges": 91
+  },
+  "nodes": [
+    {
+      "id": "App",
+      "label": "App",
+      "type": "lib",
+      "group": "core",
+      "path": "src/App.tsx"
+    },
+    {
+      "id": "components/Analytics",
+      "label": "Analytics",
+      "type": "component",
+      "group": "core",
+      "path": "src/components/Analytics.tsx"
+    },
+    {
+      "id": "components/public/AboutSection",
+      "label": "AboutSection",
+      "type": "component",
+      "group": "public",
+      "path": "src/components/public/AboutSection.tsx"
+    },
+    {
+      "id": "components/public/ArchitectureArt",
+      "label": "ArchitectureArt",
+      "type": "component",
+      "group": "public",
+      "path": "src/components/public/ArchitectureArt.tsx"
+    },
+    {
+      "id": "components/public/CaseStudiesSection",
+      "label": "CaseStudiesSection",
+      "type": "component",
+      "group": "public",
+      "path": "src/components/public/CaseStudiesSection.tsx"
+    },
+    {
+      "id": "components/public/ContactFaqSection",
+      "label": "ContactFaqSection",
+      "type": "component",
+      "group": "public",
+      "path": "src/components/public/ContactFaqSection.tsx"
+    },
+    {
+      "id": "components/public/ContactSection",
+      "label": "ContactSection",
+      "type": "component",
+      "group": "public",
+      "path": "src/components/public/ContactSection.tsx"
+    },
+    {
+      "id": "components/public/FaqSection",
+      "label": "FaqSection",
+      "type": "component",
+      "group": "public",
+      "path": "src/components/public/FaqSection.tsx"
+    },
+    {
+      "id": "components/public/FooterSection",
+      "label": "FooterSection",
+      "type": "component",
+      "group": "public",
+      "path": "src/components/public/FooterSection.tsx"
+    },
+    {
+      "id": "components/public/HeroSection",
+      "label": "HeroSection",
+      "type": "component",
+      "group": "public",
+      "path": "src/components/public/HeroSection.tsx"
+    },
+    {
+      "id": "components/public/PhilosophySection",
+      "label": "PhilosophySection",
+      "type": "component",
+      "group": "public",
+      "path": "src/components/public/PhilosophySection.tsx"
+    },
+    {
+      "id": "components/public/ProcessSection",
+      "label": "ProcessSection",
+      "type": "component",
+      "group": "public",
+      "path": "src/components/public/ProcessSection.tsx"
+    },
+    {
+      "id": "components/public/ProductsSection",
+      "label": "ProductsSection",
+      "type": "component",
+      "group": "public",
+      "path": "src/components/public/ProductsSection.tsx"
+    },
+    {
+      "id": "components/public/PublicNavbar",
+      "label": "PublicNavbar",
+      "type": "component",
+      "group": "public",
+      "path": "src/components/public/PublicNavbar.tsx"
+    },
+    {
+      "id": "components/public/RevealSection",
+      "label": "RevealSection",
+      "type": "component",
+      "group": "public",
+      "path": "src/components/public/RevealSection.tsx"
+    },
+    {
+      "id": "components/public/ServicesSection",
+      "label": "ServicesSection",
+      "type": "component",
+      "group": "public",
+      "path": "src/components/public/ServicesSection.tsx"
+    },
+    {
+      "id": "components/shared/Logo",
+      "label": "Logo",
+      "type": "component",
+      "group": "core",
+      "path": "src/components/shared/Logo.tsx"
+    },
+    {
+      "id": "content/about.json",
+      "label": "about.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/about.json"
+    },
+    {
+      "id": "content/branding.json",
+      "label": "branding.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/branding.json"
+    },
+    {
+      "id": "content/caseStudies.json",
+      "label": "caseStudies.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/caseStudies.json"
+    },
+    {
+      "id": "content/faq.json",
+      "label": "faq.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/faq.json"
+    },
+    {
+      "id": "content/footer.json",
+      "label": "footer.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/footer.json"
+    },
+    {
+      "id": "content/hero.json",
+      "label": "hero.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/hero.json"
+    },
+    {
+      "id": "content/inventory.json",
+      "label": "inventory.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/inventory.json"
+    },
+    {
+      "id": "content/legal.json",
+      "label": "legal.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/legal.json"
+    },
+    {
+      "id": "content/media.json",
+      "label": "media.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/media.json"
+    },
+    {
+      "id": "content/navigation.json",
+      "label": "navigation.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/navigation.json"
+    },
+    {
+      "id": "content/philosophy.json",
+      "label": "philosophy.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/philosophy.json"
+    },
+    {
+      "id": "content/products.json",
+      "label": "products.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/products.json"
+    },
+    {
+      "id": "content/seo.json",
+      "label": "seo.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/seo.json"
+    },
+    {
+      "id": "content/services.json",
+      "label": "services.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/services.json"
+    },
+    {
+      "id": "content/settings.json",
+      "label": "settings.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/settings.json"
+    },
+    {
+      "id": "content/themes.json",
+      "label": "themes.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/themes.json"
+    },
+    {
+      "id": "hooks/use-mobile",
+      "label": "use-mobile",
+      "type": "hook",
+      "group": "core",
+      "path": "src/hooks/use-mobile.tsx"
+    },
+    {
+      "id": "hooks/use-toast",
+      "label": "use-toast",
+      "type": "hook",
+      "group": "core",
+      "path": "src/hooks/use-toast.ts"
+    },
+    {
+      "id": "lib/brand-theme",
+      "label": "brand-theme",
+      "type": "lib",
+      "group": "core",
+      "path": "src/lib/brand-theme.ts"
+    },
+    {
+      "id": "lib/contact",
+      "label": "contact",
+      "type": "lib",
+      "group": "core",
+      "path": "src/lib/contact.ts"
+    },
+    {
+      "id": "lib/i18n",
+      "label": "i18n",
+      "type": "lib",
+      "group": "core",
+      "path": "src/lib/i18n.ts"
+    },
+    {
+      "id": "lib/icons",
+      "label": "icons",
+      "type": "lib",
+      "group": "core",
+      "path": "src/lib/icons.ts"
+    },
+    {
+      "id": "lib/media",
+      "label": "media",
+      "type": "lib",
+      "group": "core",
+      "path": "src/lib/media.ts"
+    },
+    {
+      "id": "lib/rich-text",
+      "label": "rich-text",
+      "type": "lib",
+      "group": "core",
+      "path": "src/lib/rich-text.tsx"
+    },
+    {
+      "id": "lib/sections",
+      "label": "sections",
+      "type": "lib",
+      "group": "core",
+      "path": "src/lib/sections.ts"
+    },
+    {
+      "id": "lib/seo",
+      "label": "seo",
+      "type": "lib",
+      "group": "core",
+      "path": "src/lib/seo.ts"
+    },
+    {
+      "id": "lib/theme",
+      "label": "theme",
+      "type": "lib",
+      "group": "core",
+      "path": "src/lib/theme.ts"
+    },
+    {
+      "id": "lib/translate",
+      "label": "translate",
+      "type": "lib",
+      "group": "core",
+      "path": "src/lib/translate.ts"
+    },
+    {
+      "id": "lib/utils",
+      "label": "utils",
+      "type": "lib",
+      "group": "core",
+      "path": "src/lib/utils.ts"
+    },
+    {
+      "id": "main",
+      "label": "main",
+      "type": "lib",
+      "group": "core",
+      "path": "src/main.tsx"
+    },
+    {
+      "id": "pages/not-found",
+      "label": "not-found",
+      "type": "page",
+      "group": "core",
+      "path": "src/pages/not-found.tsx"
+    },
+    {
+      "id": "pages/public/LegalPage",
+      "label": "LegalPage",
+      "type": "page",
+      "group": "public",
+      "path": "src/pages/public/LegalPage.tsx"
+    },
+    {
+      "id": "pages/public/PublicWebsite",
+      "label": "PublicWebsite",
+      "type": "page",
+      "group": "public",
+      "path": "src/pages/public/PublicWebsite.tsx"
+    },
+    {
+      "id": "repositories/about.repository",
+      "label": "about.repository",
+      "type": "repository",
+      "group": "core",
+      "path": "src/repositories/about.repository.ts"
+    },
+    {
+      "id": "repositories/branding.repository",
+      "label": "branding.repository",
+      "type": "repository",
+      "group": "core",
+      "path": "src/repositories/branding.repository.ts"
+    },
+    {
+      "id": "repositories/caseStudies.repository",
+      "label": "caseStudies.repository",
+      "type": "repository",
+      "group": "core",
+      "path": "src/repositories/caseStudies.repository.ts"
+    },
+    {
+      "id": "repositories/inventory.repository",
+      "label": "inventory.repository",
+      "type": "repository",
+      "group": "core",
+      "path": "src/repositories/inventory.repository.ts"
+    },
+    {
+      "id": "repositories/media.repository",
+      "label": "media.repository",
+      "type": "repository",
+      "group": "core",
+      "path": "src/repositories/media.repository.ts"
+    },
+    {
+      "id": "repositories/products.repository",
+      "label": "products.repository",
+      "type": "repository",
+      "group": "core",
+      "path": "src/repositories/products.repository.ts"
+    },
+    {
+      "id": "repositories/published-content",
+      "label": "published-content",
+      "type": "repository",
+      "group": "core",
+      "path": "src/repositories/published-content.ts"
+    },
+    {
+      "id": "repositories/services.repository",
+      "label": "services.repository",
+      "type": "repository",
+      "group": "core",
+      "path": "src/repositories/services.repository.ts"
+    },
+    {
+      "id": "repositories/settings.repository",
+      "label": "settings.repository",
+      "type": "repository",
+      "group": "core",
+      "path": "src/repositories/settings.repository.ts"
+    },
+    {
+      "id": "services/caseStudies.service",
+      "label": "caseStudies.service",
+      "type": "service",
+      "group": "core",
+      "path": "src/services/caseStudies.service.ts"
+    },
+    {
+      "id": "services/products.service",
+      "label": "products.service",
+      "type": "service",
+      "group": "core",
+      "path": "src/services/products.service.ts"
+    },
+    {
+      "id": "services/services.service",
+      "label": "services.service",
+      "type": "service",
+      "group": "core",
+      "path": "src/services/services.service.ts"
+    },
+    {
+      "id": "translations/en.json",
+      "label": "en.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/translations/en.json"
+    },
+    {
+      "id": "translations/es.json",
+      "label": "es.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/translations/es.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "App",
+      "to": "components/Analytics",
+      "kind": "imports"
+    },
+    {
+      "from": "App",
+      "to": "lib/sections",
+      "kind": "imports"
+    },
+    {
+      "from": "App",
+      "to": "pages/not-found",
+      "kind": "imports"
+    },
+    {
+      "from": "App",
+      "to": "pages/public/LegalPage",
+      "kind": "imports"
+    },
+    {
+      "from": "App",
+      "to": "pages/public/PublicWebsite",
+      "kind": "imports"
+    },
+    {
+      "from": "components/Analytics",
+      "to": "content/seo.json",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/AboutSection",
+      "to": "lib/rich-text",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/AboutSection",
+      "to": "repositories/about.repository",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/AboutSection",
+      "to": "services/services.service",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/CaseStudiesSection",
+      "to": "lib/media",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/CaseStudiesSection",
+      "to": "lib/rich-text",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/CaseStudiesSection",
+      "to": "services/caseStudies.service",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/ContactFaqSection",
+      "to": "components/public/ContactSection",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/ContactFaqSection",
+      "to": "components/public/FaqSection",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/ContactSection",
+      "to": "content/settings.json",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/ContactSection",
+      "to": "lib/contact",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/FaqSection",
+      "to": "content/faq.json",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/FooterSection",
+      "to": "components/shared/Logo",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/FooterSection",
+      "to": "content/footer.json",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/FooterSection",
+      "to": "lib/sections",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/HeroSection",
+      "to": "components/public/ArchitectureArt",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/HeroSection",
+      "to": "content/hero.json",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/HeroSection",
+      "to": "lib/rich-text",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/HeroSection",
+      "to": "lib/sections",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/PhilosophySection",
+      "to": "content/philosophy.json",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/PhilosophySection",
+      "to": "lib/rich-text",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/ProcessSection",
+      "to": "content/hero.json",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/ProcessSection",
+      "to": "lib/icons",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/ProductsSection",
+      "to": "lib/icons",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/ProductsSection",
+      "to": "lib/media",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/ProductsSection",
+      "to": "lib/rich-text",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/ProductsSection",
+      "to": "lib/sections",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/ProductsSection",
+      "to": "services/products.service",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/PublicNavbar",
+      "to": "components/shared/Logo",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/PublicNavbar",
+      "to": "content/navigation.json",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/PublicNavbar",
+      "to": "lib/sections",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/PublicNavbar",
+      "to": "lib/theme",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/ServicesSection",
+      "to": "components/public/ArchitectureArt",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/ServicesSection",
+      "to": "lib/icons",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/ServicesSection",
+      "to": "lib/rich-text",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/ServicesSection",
+      "to": "services/services.service",
+      "kind": "imports"
+    },
+    {
+      "from": "components/shared/Logo",
+      "to": "lib/media",
+      "kind": "imports"
+    },
+    {
+      "from": "components/shared/Logo",
+      "to": "repositories/branding.repository",
+      "kind": "imports"
+    },
+    {
+      "from": "lib/brand-theme",
+      "to": "content/branding.json",
+      "kind": "imports"
+    },
+    {
+      "from": "lib/brand-theme",
+      "to": "content/themes.json",
+      "kind": "imports"
+    },
+    {
+      "from": "lib/brand-theme",
+      "to": "lib/media",
+      "kind": "imports"
+    },
+    {
+      "from": "lib/i18n",
+      "to": "translations/en.json",
+      "kind": "imports"
+    },
+    {
+      "from": "lib/i18n",
+      "to": "translations/es.json",
+      "kind": "imports"
+    },
+    {
+      "from": "lib/media",
+      "to": "content/seo.json",
+      "kind": "imports"
+    },
+    {
+      "from": "lib/seo",
+      "to": "content/legal.json",
+      "kind": "imports"
+    },
+    {
+      "from": "lib/seo",
+      "to": "content/seo.json",
+      "kind": "imports"
+    },
+    {
+      "from": "lib/seo",
+      "to": "lib/media",
+      "kind": "imports"
+    },
+    {
+      "from": "lib/seo",
+      "to": "lib/sections",
+      "kind": "imports"
+    },
+    {
+      "from": "main",
+      "to": "App",
+      "kind": "imports"
+    },
+    {
+      "from": "main",
+      "to": "lib/brand-theme",
+      "kind": "imports"
+    },
+    {
+      "from": "main",
+      "to": "lib/i18n",
+      "kind": "imports"
+    },
+    {
+      "from": "main",
+      "to": "repositories/published-content",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/not-found",
+      "to": "components/public/FooterSection",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/not-found",
+      "to": "components/public/PublicNavbar",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/not-found",
+      "to": "lib/seo",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/LegalPage",
+      "to": "components/public/FooterSection",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/LegalPage",
+      "to": "components/public/PublicNavbar",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/LegalPage",
+      "to": "content/legal.json",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/LegalPage",
+      "to": "lib/seo",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/PublicWebsite",
+      "to": "components/public/AboutSection",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/PublicWebsite",
+      "to": "components/public/CaseStudiesSection",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/PublicWebsite",
+      "to": "components/public/ContactFaqSection",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/PublicWebsite",
+      "to": "components/public/FooterSection",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/PublicWebsite",
+      "to": "components/public/HeroSection",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/PublicWebsite",
+      "to": "components/public/PhilosophySection",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/PublicWebsite",
+      "to": "components/public/ProcessSection",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/PublicWebsite",
+      "to": "components/public/ProductsSection",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/PublicWebsite",
+      "to": "components/public/PublicNavbar",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/PublicWebsite",
+      "to": "components/public/RevealSection",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/PublicWebsite",
+      "to": "components/public/ServicesSection",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/PublicWebsite",
+      "to": "lib/sections",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/PublicWebsite",
+      "to": "lib/seo",
+      "kind": "imports"
+    },
+    {
+      "from": "repositories/about.repository",
+      "to": "content/about.json",
+      "kind": "imports"
+    },
+    {
+      "from": "repositories/branding.repository",
+      "to": "content/branding.json",
+      "kind": "imports"
+    },
+    {
+      "from": "repositories/caseStudies.repository",
+      "to": "content/caseStudies.json",
+      "kind": "imports"
+    },
+    {
+      "from": "repositories/inventory.repository",
+      "to": "content/inventory.json",
+      "kind": "imports"
+    },
+    {
+      "from": "repositories/media.repository",
+      "to": "content/media.json",
+      "kind": "imports"
+    },
+    {
+      "from": "repositories/media.repository",
+      "to": "lib/media",
+      "kind": "imports"
+    },
+    {
+      "from": "repositories/products.repository",
+      "to": "content/products.json",
+      "kind": "imports"
+    },
+    {
+      "from": "repositories/published-content",
+      "to": "lib/brand-theme",
+      "kind": "imports"
+    },
+    {
+      "from": "repositories/published-content",
+      "to": "lib/i18n",
+      "kind": "imports"
+    },
+    {
+      "from": "repositories/services.repository",
+      "to": "content/services.json",
+      "kind": "imports"
+    },
+    {
+      "from": "repositories/settings.repository",
+      "to": "content/settings.json",
+      "kind": "imports"
+    },
+    {
+      "from": "services/caseStudies.service",
+      "to": "repositories/caseStudies.repository",
+      "kind": "imports"
+    },
+    {
+      "from": "services/products.service",
+      "to": "repositories/products.repository",
+      "kind": "imports"
+    },
+    {
+      "from": "services/services.service",
+      "to": "repositories/services.repository",
+      "kind": "imports"
+    }
+  ]
+}

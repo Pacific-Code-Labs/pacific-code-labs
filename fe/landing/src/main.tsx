@@ -1,0 +1,12 @@
+import "@/lib/i18n";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import { initBrand } from "@/lib/brand-theme";
+import { startPublishedContent } from "@/repositories/published-content";
+import "./index.css";
+initBrand();
+const root=createRoot(document.getElementById("root")!);
+let revision=0;
+const render=()=>root.render(<App key={revision++}/>);
+startPublishedContent(render);
+render();

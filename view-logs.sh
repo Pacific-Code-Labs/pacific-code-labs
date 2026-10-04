@@ -1,14 +1,4 @@
-#!/bin/bash
-# Tail the local Pacific Code Labs DXP dev server logs.
-
-GREEN='\033[0;32m'; YELLOW='\033[1;33m'; NC='\033[0m'
-LOG_FILE="logs/dxp.log"
-
-if [ ! -f "$LOG_FILE" ]; then
-  echo "❌ Log file not found: $LOG_FILE — start the server with ./reboot-server.sh"
-  exit 1
-fi
-
-echo -e "${GREEN}📋 Tailing $LOG_FILE${NC} (${YELLOW}Ctrl+C to exit${NC})"
-echo ""
-tail -f "$LOG_FILE"
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+tail -f logs/landing.log logs/admin.log

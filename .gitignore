@@ -52,3 +52,20 @@ Thumbs.db
 # stray pasted screenshots
 /image.png
 /image copy*.png
+
+# Local deployment/cache artifacts
+.deploy/
+.aws-sam/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Extracted app boundaries; never publish private admin/backend source in this public repo.
+# https://github.com/Pacific-Code-Labs/pacific-code-labs-admin (private)
+/fe/admin/
+# https://github.com/Pacific-Code-Labs/pacific-code-labs-management-be (private)
+/be/management-be/
+# https://github.com/Pacific-Code-Labs/pacific-code-labs-design-system (public, pinned v0.1.0)
+/fe/design-system/
+# https://github.com/Pacific-Code-Labs/pacific-code-labs-infrastructure (private)
+/infra/

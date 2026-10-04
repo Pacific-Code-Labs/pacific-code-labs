@@ -1,15 +1,13 @@
 name: Deploy DXP to GitHub Pages
 
-# Builds the public marketing site (@workspace/dxp) and publishes it to
-# GitHub Pages. The admin CMS panel is a local-only authoring tool and is
-# intentionally NOT shipped in this build: VITE_ENABLE_ADMIN is left unset,
-# so `import.meta.env.DEV === false` gates the `/admin/*` routes and the
-# navbar link out of the production bundle (they are tree-shaken away).
+# Public landing build only. Admin ships through its independent workflow.
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: "0 12 * * *"
 
 # Allow only one concurrent deployment; cancel in-progress runs.
 concurrency:
@@ -53,22 +51,30 @@ jobs:
       - name: Install dependencies
         # Filtered install: only the DXP and its workspace deps — skips the
         # backend (api-server/db) so CI stays fast and needs no native esbuild.
-        run: pnpm install --frozen-lockfile --filter "@workspace/dxp..."
+        run: pnpm install --frozen-lockfile --filter "@pcl/landing..."
 
-      - name: Build DXP (production, admin disabled)
+      - name: Pull published content for SEO
+        env:
+          VITE_CDN_URL: https://cdn.pacific-code-labs.jcampos.dev
+        run: node fe/landing/scripts/pull-published-content.mjs
+
+      - name: Build landing
         env:
           NODE_ENV: production
-        run: pnpm --filter @workspace/dxp run build
+        run: |
+          pnpm --filter @pcl/landing run typecheck
+          pnpm --filter @pcl/landing run build
+          if rg "__local/|oauth2/authorize|api/admin|VITE_ADMIN" fe/landing/dist/public; then exit 1; fi
 
       - name: Add custom domain (CNAME)
         # The build step pre-renders per-route static HTML (incl. a noindex
         # 404.html SPA fallback) via scripts/prerender.mjs, so no cp step here.
-        run: echo "$CUSTOM_DOMAIN" > artifacts/dxp/dist/public/CNAME
+        run: echo "$CUSTOM_DOMAIN" > fe/landing/dist/public/CNAME
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: artifacts/dxp/dist/public
+          path: fe/landing/dist/public
 
   deploy:
     needs: build
@@ -91,7 +97,7 @@ jobs:
         run: |
           HOST="$CUSTOM_DOMAIN"
           LANGS="es en"
-          SLUGS="products services about philosophy case-studies contact privacy terms"
+          SLUGS="products services how about philosophy case-studies contact privacy terms"
           urls=""
           for l in $LANGS; do
             urls="$urls\"https://$HOST/$l\","

@@ -1,97 +1,35 @@
-# Pacific Code Labs DXP
+# Pacific Code Labs
 
-A Digital Experience Platform for **Pacific Code Labs**, a Costa Rica–based
-technology company. It combines a polished public marketing site with a full
-admin CMS panel — all driven by local JSON content files, with **no backend
-required at runtime**.
+Public bilingual landing at https://pacific-code-labs.jcampos.dev, with a separate invitation-only admin at https://admin.pacific-code-labs.jcampos.dev. Media and published public JSON are served at https://cdn.pacific-code-labs.jcampos.dev.
 
-🌐 **Live:** https://pacific-code-labs.jcampos.dev
+## Independent applications
 
-## Tech stack
+- `fe/landing`: this public repository, GitHub Pages. No admin code or Cognito configuration ships in its bundle.
+- `fe/admin`: private `Pacific-Code-Labs/pacific-code-labs-admin`, S3/CloudFront hosting.
+- `be/management-be`: private `Pacific-Code-Labs/pacific-code-labs-management-be`, FastAPI image Lambda and authenticated API Gateway.
+- `infra`: private `Pacific-Code-Labs/pacific-code-labs-infrastructure`, YAML templates and styled Cognito emails.
+- `fe/design-system`: public `Pacific-Code-Labs/pacific-code-labs-design-system`, pinned Git tag v0.1.0 used by both frontends.
 
-- **pnpm** workspaces · **Node.js 24** · **TypeScript 5.9**
-- **React 18** + **Vite 7**
-- **TailwindCSS v4** + **shadcn/ui** (Radix primitives)
-- Routing: **wouter** · State/CMS: **Zustand**
-- i18n: **i18next** / **react-i18next** (Spanish default, English toggle)
-- Content: local JSON files bundled with the app
+Private folders are independent Git checkouts and ignored by this public repository. Clone them into the paths above to operate the full workspace.
 
-## Repository layout
+## Run locally
 
-This is a pnpm monorepo. The deployed product is `artifacts/dxp`.
+Install Node and pnpm, then `pnpm install`. `bash reboot-server.sh` starts the landing on http://127.0.0.1:5183 and the admin on http://127.0.0.1:5185. Use `LOAD_ADMIN_SSM=1 bash reboot-server.sh` with the PACIFIC-PROD profile to load admin configuration. `bash stop-server.sh` stops only this workspace's processes; `bash view-logs.sh` reads their logs.
 
-| Package | Path | Purpose |
-| --- | --- | --- |
-| `@workspace/dxp` | `artifacts/dxp` | **The product** — public site + admin CMS (ships to GitHub Pages) |
-| `@workspace/api-server` | `artifacts/api-server` | Optional Express backend (not part of the Pages deploy) |
-| `@workspace/mockup-sandbox` | `artifacts/mockup-sandbox` | Design/prototype sandbox |
-| `@workspace/db` | `lib/db` | Drizzle ORM schema/connection |
-| `@workspace/api-spec` · `api-zod` · `api-client-react` | `lib/*` | Shared API spec, Zod schemas, React client |
+## Content and organization
 
-## Getting started
+The admin manages all public content and translations, logos/media, clients, projects and payment records. USD and CRC totals are kept separate and amounts use integer minor units. Draft saves use optimistic versions and S3 conditional writes; publish is explicit. A dedicated private data bucket stores organization records and drafts. Only allowlisted website content can enter the public snapshot, and the CDN exposes only media and published paths. The landing refreshes the snapshot in the background and uses bundled content as a fallback. The scheduled Pages build refreshes prerendered SEO content daily.
 
-> Requires **Node 24** and **pnpm 10**. (`npm`/`yarn` are blocked by a preinstall guard.)
+Products use the canonical Tsuru, Sóköl and Ujtö̀ domains. Sóköl is marked coming soon. Shared tokens, components and flag icons are versioned in the design system.
 
-```bash
-pnpm install
+## Production deployment
 
-# Run the DXP locally (admin panel enabled in dev)
-PORT=5000 BASE_PATH=/ pnpm --filter @workspace/dxp run dev
-```
+`environments/prod.env` contains nonsecret coordinates and selects AWS profile PACIFIC-PROD. Run `bash deploy-env.sh prod --plan` to inspect stages, or `bash deploy-env.sh prod` to deploy certificates, platform, styled invitations, backend, initial missing content and admin assets. Docker and AWS SAM are required for the image backend. Existing content is never overwritten by the seed. Individual stages are reusable scripts under `scripts/`. Landing changes deploy through this repository's GitHub Pages workflow.
 
-`vite.config.ts` requires both `PORT` and `BASE_PATH` to be set — including for builds.
+The verified jcampos.dev SES identity is reused. SES currently runs in sandbox mode: new recipients must be verified until production access is granted. Invite with `bash scripts/invite-admin.sh EMAIL es` (or en). Cognito generates and delivers the temporary password; scripts do not print it.
 
-### Build
+Admin deployment uses an environment-scoped GitHub OIDC publish role with read-only SSM configuration and access only to its hosting bucket and distribution. No AWS access keys are stored in frontend configuration.
 
-```bash
-NODE_ENV=production PORT=5000 BASE_PATH=/ pnpm --filter @workspace/dxp run build
-# Output: artifacts/dxp/dist/public
-```
+## Validation
 
-### Typecheck
-
-```bash
-pnpm --filter @workspace/dxp run typecheck
-```
-
-## Content & the admin panel
-
-The site reads content from `artifacts/dxp/src/content/*.json`. The admin panel
-(`/admin/*`) edits that content **in memory** (Zustand) and lets you **Export
-JSON** to download updated files, which you then commit. The next build picks up
-the changes.
-
-> The admin panel has no authentication and is a **local authoring tool only**.
-> It is automatically **excluded from production builds** (see below).
-
-## Admin is disabled in production
-
-`src/lib/admin-enabled.ts` exposes `ADMIN_ENABLED`, which is `true` only in dev
-(or when explicitly built with `VITE_ENABLE_ADMIN=true`). In a normal production
-build it folds to a constant `false`, so the admin routes, the navbar link, and
-the entire admin panel are **tree-shaken out of the shipped bundle**. Visiting
-`/admin` on the live site falls through to the 404/redirect to home.
-
-To intentionally produce an admin-enabled build (e.g. an internal preview):
-
-```bash
-VITE_ENABLE_ADMIN=true NODE_ENV=production PORT=5000 BASE_PATH=/ \
-  pnpm --filter @workspace/dxp run build
-```
-
-## Deployment
-
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which:
-
-1. Installs the DXP and its workspace dependencies (filtered install).
-2. Builds the production bundle with the admin panel disabled.
-3. Writes a `CNAME` for the custom domain and a `404.html` SPA fallback.
-4. Publishes `artifacts/dxp/dist/public` to **GitHub Pages**.
-
-**One-time setup:** in the repo settings, set **Settings → Pages → Source** to
-**GitHub Actions**, and point the `pacific-code-labs.jcampos.dev` DNS record
-(CNAME) at GitHub Pages.
-
-## License
-
-[MIT](./LICENSE) © Pacific Code Labs
+`pnpm --filter @pcl/landing run typecheck` and `pnpm --filter @pcl/landing run build`. In the private workspace, `pnpm --filter @pcl/admin run build` and `PYTHONPATH=be/management-be python3 -m pytest be/management-be/tests infra/email/tests -q`. Run `pnpm --filter @pcl/landing run inventory` after content structure changes.

@@ -1,16 +1,6 @@
-#!/bin/bash
-# Stop the local Pacific Code Labs DXP dev server.
-
-GREEN='\033[0;32m'; NC='\033[0m'
-PORT=5000
-
-echo "Stopping Pacific Code Labs DXP on port $PORT..."
-if command -v taskkill >/dev/null 2>&1; then
-  pid=$(netstat -ano 2>/dev/null | grep ":$PORT" | grep LISTENING | awk '{print $5}' | head -1)
-  [ -n "$pid" ] && taskkill //F //PID "$pid" 2>/dev/null || true
-else
-  pid=$(lsof -ti tcp:$PORT 2>/dev/null | head -1)
-  [ -n "$pid" ] && kill -9 "$pid" 2>/dev/null || true
-fi
-
-echo -e "${GREEN}Done.${NC}"
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+for name in landing admin; do
+ if [[ -f "logs/$name.pid" ]]; then kill "$(cat "logs/$name.pid")" 2>/dev/null || true; rm "logs/$name.pid"; fi
+ done

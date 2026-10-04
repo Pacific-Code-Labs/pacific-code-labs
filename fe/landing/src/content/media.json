@@ -1,0 +1,49 @@
+{
+  "items": [
+    {
+      "id": "tsuru-logo",
+      "kind": "image",
+      "filename": "tsuru-f1c7368ce81e.png",
+      "url": "https://cdn.pacific-code-labs.jcampos.dev/media/products/tsuru-f1c7368ce81e.png",
+      "path": "",
+      "alt": {
+        "es": "Tsuru",
+        "en": "Tsuru"
+      },
+      "source": "external",
+      "mime": "image/png",
+      "size": 0,
+      "createdAt": "2026-10-04T00:00:00Z"
+    },
+    {
+      "id": "sokol-logo",
+      "kind": "image",
+      "filename": "sokol-aacbe26fc8b3.png",
+      "url": "https://cdn.pacific-code-labs.jcampos.dev/media/products/sokol-aacbe26fc8b3.png",
+      "path": "",
+      "alt": {
+        "es": "Sóköl",
+        "en": "Sóköl"
+      },
+      "source": "external",
+      "mime": "image/png",
+      "size": 0,
+      "createdAt": "2026-10-04T00:00:00Z"
+    },
+    {
+      "id": "ujto-logo",
+      "kind": "image",
+      "filename": "ujto-317f14834170.png",
+      "url": "https://cdn.pacific-code-labs.jcampos.dev/media/products/ujto-317f14834170.png",
+      "path": "",
+      "alt": {
+        "es": "Ujtö̀",
+        "en": "Ujtö̀"
+      },
+      "source": "external",
+      "mime": "image/png",
+      "size": 0,
+      "createdAt": "2026-10-04T00:00:00Z"
+    }
+  ]
+}

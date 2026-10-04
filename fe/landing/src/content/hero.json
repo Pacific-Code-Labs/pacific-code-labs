@@ -1,0 +1,90 @@
+{
+  "translations": {
+    "es": {
+      "eyebrow": "Costa Rica · Tecnología · Propósito",
+      "title": "Transformamos procesos empresariales en {{software inteligente}}.",
+      "subtitle": "Desarrollamos productos tecnológicos y soluciones empresariales desde Costa Rica.",
+      "stats": [
+        {
+          "value": "3",
+          "label": "Productos propios"
+        },
+        {
+          "value": "5+",
+          "label": "Áreas de servicio"
+        },
+        {
+          "value": "CR",
+          "label": "Hecho en Costa Rica"
+        }
+      ]
+    },
+    "en": {
+      "eyebrow": "Costa Rica · Technology · Purpose",
+      "title": "We transform business processes into {{intelligent software}}.",
+      "subtitle": "We build technology products and business solutions from Costa Rica.",
+      "stats": [
+        {
+          "value": "3",
+          "label": "Our own products"
+        },
+        {
+          "value": "5+",
+          "label": "Service areas"
+        },
+        {
+          "value": "CR",
+          "label": "Made in Costa Rica"
+        }
+      ]
+    }
+  },
+  "process": {
+    "eyebrow": {
+      "es": "DEL RETO AL RESULTADO",
+      "en": "FROM CHALLENGE TO OUTCOME"
+    },
+    "title": {
+      "es": "Una colaboración clara, de principio a fin.",
+      "en": "A clear partnership, from start to finish."
+    },
+    "steps": [
+      {
+        "id": "discover",
+        "iconName": "Search",
+        "title": {
+          "es": "Entendemos el problema",
+          "en": "Understand the challenge"
+        },
+        "description": {
+          "es": "Conversamos sobre tus procesos, tus usuarios y las oportunidades. Definimos juntos el alcance y qué significa un buen resultado.",
+          "en": "We discuss your processes, users and opportunities. Together we define the scope and what a good result looks like."
+        }
+      },
+      {
+        "id": "build",
+        "iconName": "Code2",
+        "title": {
+          "es": "Diseñamos y construimos",
+          "en": "Design and build"
+        },
+        "description": {
+          "es": "Convertimos el alcance en una solución concreta, con entregas que puedes revisar y decisiones técnicas conectadas con tu negocio.",
+          "en": "We turn the scope into a concrete solution, with deliveries you can review and technical decisions connected to your business."
+        }
+      },
+      {
+        "id": "launch",
+        "iconName": "Rocket",
+        "title": {
+          "es": "Lanzamos y acompañamos",
+          "en": "Launch and support"
+        },
+        "description": {
+          "es": "Preparamos la operación, documentamos el sistema y acordamos el acompañamiento para que tu equipo pueda seguir avanzando.",
+          "en": "We prepare operations, document the system and agree on ongoing support so your team can keep moving forward."
+        }
+      }
+    ]
+  }
+}
