@@ -1,10 +1,60 @@
 {
   "items": [
-    { "href": "/products", "order": 1, "label": { "es": "Productos", "en": "Products" } },
-    { "href": "/services", "order": 2, "label": { "es": "Servicios", "en": "Services" } },
-    { "href": "/about", "order": 3, "label": { "es": "Nosotros", "en": "About" } },
-    { "href": "/philosophy", "order": 4, "label": { "es": "Filosofía", "en": "Philosophy" } },
-    { "href": "/case-studies", "order": 5, "label": { "es": "Casos de Éxito", "en": "Case Studies" } },
-    { "href": "/contact", "order": 6, "label": { "es": "Contacto", "en": "Contact" } }
+    {
+      "href": "/products",
+      "order": 1,
+      "label": {
+        "es": "Productos",
+        "en": "Products"
+      }
+    },
+    {
+      "href": "/services",
+      "order": 2,
+      "label": {
+        "es": "Servicios",
+        "en": "Services"
+      }
+    },
+    {
+      "href": "/how",
+      "order": 3,
+      "label": {
+        "es": "Cómo trabajamos",
+        "en": "How we work"
+      }
+    },
+    {
+      "href": "/about",
+      "order": 4,
+      "label": {
+        "es": "Nosotros",
+        "en": "About"
+      }
+    },
+    {
+      "href": "/philosophy",
+      "order": 5,
+      "label": {
+        "es": "Filosofía",
+        "en": "Philosophy"
+      }
+    },
+    {
+      "href": "/case-studies",
+      "order": 6,
+      "label": {
+        "es": "Casos de Éxito",
+        "en": "Case Studies"
+      }
+    },
+    {
+      "href": "/contact",
+      "order": 7,
+      "label": {
+        "es": "Contacto",
+        "en": "Contact"
+      }
+    }
   ]
 }

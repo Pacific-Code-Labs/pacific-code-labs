@@ -49,32 +49,50 @@ export function PublicWebsite() {
     return () => cancelAnimationFrame(raf);
   }, [location]);
 
-  // Scroll-spy: update the URL to match the section crossing the viewport
-  // centre, without adding history entries or triggering the scroll effect.
+  // Track the section at the viewport centre. Geometry also handles short
+  // sections, gaps between reveal wrappers, and large scroll jumps reliably.
   useEffect(() => {
-    const ids = ["hero", ...SECTION_SLUGS];
-    const observed = ids
+    const sections = ["hero", ...SECTION_SLUGS]
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => el !== null);
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (Date.now() < programmaticUntilRef.current) return;
-        const hit = entries.find((e) => e.isIntersecting);
-        if (!hit) return;
-        const id = hit.target.id;
-        const path = id === "hero" ? localizedPath(lang) : localizedPath(lang, id);
-        if (path !== locationRef.current) {
-          suppressScrollRef.current = true;
-          navigate(path, { replace: true });
-        }
-      },
-      // A thin band across the viewport centre → one section "active" at a time.
-      { rootMargin: "-50% 0px -50% 0px", threshold: 0 },
-    );
-
-    observed.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    let frame = 0;
+    let disposed = false;
+    const update = () => {
+      frame = 0;
+      if (disposed) return;
+      // Recheck after a navigation scroll settles even if no new scroll event
+      // arrives. Otherwise its final section can remain untracked.
+      if (Date.now() < programmaticUntilRef.current) {
+        frame = requestAnimationFrame(update);
+        return;
+      }
+      const probe = Math.max(65, window.innerHeight / 2);
+      let active = sections[0];
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= probe) active = section;
+        else break;
+      }
+      if (!active) return;
+      const path = active.id === "hero"
+        ? localizedPath(lang)
+        : localizedPath(lang, active.id);
+      if (path !== locationRef.current) {
+        suppressScrollRef.current = true;
+        navigate(path, { replace: true });
+      }
+    };
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    schedule();
+    return () => {
+      disposed = true;
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+    };
   }, [navigate, lang]);
 
   return (

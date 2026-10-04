@@ -76,7 +76,7 @@ export function PublicNavbar() {
 
           {/* Desktop nav */}
           <nav
-            className="hidden lg:flex items-center gap-6"
+            className="hidden xl:flex items-center gap-6"
             data-testid="nav-links"
           >
             {[...navigationData.items]
@@ -132,7 +132,7 @@ export function PublicNavbar() {
             {/* Mobile hamburger */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="lg:hidden p-2 rounded-lg text-[#475569] hover:text-[#0F172A] dark:text-white/60 dark:hover:text-white hover:bg-[#0F172A]/6 dark:hover:bg-white/8 transition-all"
+              className="xl:hidden p-2 rounded-lg text-[#475569] hover:text-[#0F172A] dark:text-white/60 dark:hover:text-white hover:bg-[#0F172A]/6 dark:hover:bg-white/8 transition-all"
               aria-label={t("common.toggle_menu")}
               aria-expanded={menuOpen}
               data-testid="mobile-menu-toggle"
@@ -149,7 +149,7 @@ export function PublicNavbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-white/98 dark:bg-[#0F172A]/98 backdrop-blur-md border-t border-[#E2E8F0] dark:border-white/5 px-4 py-4 space-y-1">
+        <div className="xl:hidden bg-white/98 dark:bg-[#0F172A]/98 backdrop-blur-md border-t border-[#E2E8F0] dark:border-white/5 px-4 py-4 space-y-1">
           {[...navigationData.items]
             .sort((a, b) => a.order - b.order)
             .map((item) => {
