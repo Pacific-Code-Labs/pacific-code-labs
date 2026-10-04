@@ -1,6 +1,6 @@
 # Pacific Code Labs
 
-Public bilingual landing at https://pacific-code-labs.jcampos.dev, with a separate invitation-only admin at https://admin.pacific-code-labs.jcampos.dev. Media and published public JSON are served at https://cdn.pacific-code-labs.jcampos.dev.
+Public bilingual landing at https://pacific-code-labs.jcampos.dev, with a separate invitation-only admin at https://admin.jcampos.dev. Sign-in, invitation password changes and password resets use Amplify Auth on the same admin origin. Media and published public JSON are served at https://cdn.pacific-code-labs.jcampos.dev.
 
 ## Independent applications
 
@@ -8,7 +8,7 @@ Public bilingual landing at https://pacific-code-labs.jcampos.dev, with a separa
 - `fe/admin`: private `Pacific-Code-Labs/pacific-code-labs-admin`, S3/CloudFront hosting.
 - `be/management-be`: private `Pacific-Code-Labs/pacific-code-labs-management-be`, FastAPI image Lambda and authenticated API Gateway.
 - `infra`: private `Pacific-Code-Labs/pacific-code-labs-infrastructure`, YAML templates and styled Cognito emails.
-- `fe/design-system`: public `Pacific-Code-Labs/pacific-code-labs-design-system`, pinned Git tag v0.1.0 used by both frontends.
+- `fe/design-system`: public `Pacific-Code-Labs/pacific-code-labs-design-system`, pinned Git tag v0.1.1 used by both frontends.
 
 Private folders are independent Git checkouts and ignored by this public repository. Clone them into the paths above to operate the full workspace.
 

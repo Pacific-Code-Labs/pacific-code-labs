@@ -339,3 +339,5 @@ button:focus-visible {
 [data-testid="lang-toggle"] svg { width: 24px !important; height: 18px !important; }
 
 .hero-proof strong svg { width: 42px; height: 28px; display: block; }
+
+.brand-highlight { background-image: linear-gradient(100deg, hsl(var(--primary)), hsl(var(--accent))); }

@@ -79,6 +79,6 @@
     "i18next": "^26.3.0",
     "react-i18next": "^17.0.8",
     "zustand": "^5.0.14",
-    "@pcl/design-system": "github:Pacific-Code-Labs/pacific-code-labs-design-system#v0.1.0"
+    "@pcl/design-system": "github:Pacific-Code-Labs/pacific-code-labs-design-system#v0.1.1"
   }
 }

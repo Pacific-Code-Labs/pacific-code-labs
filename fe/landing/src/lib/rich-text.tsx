@@ -22,7 +22,7 @@ type Style = "gradient" | "cyan" | "emerald" | "amber" | "bold";
 
 const STYLE_CLASS: Record<Style, string> = {
   gradient:
-    "text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#06B6D4]",
+    "brand-highlight text-transparent bg-clip-text",
   cyan: "text-[#06B6D4]",
   emerald: "text-[#10B981]",
   amber: "text-[#F59E0B]",

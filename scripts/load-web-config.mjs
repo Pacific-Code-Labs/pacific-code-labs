@@ -30,7 +30,7 @@ const keys =
     ? { "cdn-url": "VITE_CDN_URL" }
     : {
         "api-url": "VITE_ADMIN_API_URL",
-        "auth-domain": "VITE_ADMIN_AUTH_DOMAIN",
+        "pool-id": "VITE_ADMIN_USER_POOL_ID",
         "client-id": "VITE_ADMIN_CLIENT_ID",
         "landing-url": "VITE_LANDING_URL",
         bucket: "ADMIN_BUCKET",
