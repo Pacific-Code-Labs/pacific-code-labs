@@ -97,7 +97,7 @@ jobs:
         run: |
           HOST="$CUSTOM_DOMAIN"
           LANGS="es en"
-          SLUGS="products services how about philosophy case-studies contact privacy terms"
+          SLUGS="products courses services how about philosophy case-studies contact privacy terms"
           urls=""
           for l in $LANGS; do
             urls="$urls\"https://$HOST/$l\","

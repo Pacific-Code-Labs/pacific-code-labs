@@ -81,6 +81,16 @@
         "es": "De la primera conversación al lanzamiento: descubre cómo colaboramos para construir tu software.",
         "en": "From the first conversation to launch: discover how we partner to build your software."
       }
+    },
+    "/courses": {
+      "title": {
+        "es": "Cursos — Pacific Code Labs",
+        "en": "Courses — Pacific Code Labs"
+      },
+      "description": {
+        "es": "Aprende Linux, Git, React, Node.js y CI/CD con Linux Lab, el curso práctico y bilingüe de Pacific Code Labs.",
+        "en": "Learn Linux, Git, React, Node.js and CI/CD with Linux Lab, the practical bilingual course from Pacific Code Labs."
+      }
     }
   }
 }

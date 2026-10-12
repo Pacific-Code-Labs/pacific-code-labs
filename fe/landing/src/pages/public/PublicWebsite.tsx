@@ -8,6 +8,7 @@ import { resolveSeo, useHeadTags, type Lang } from "@/lib/seo";
 import { PublicNavbar } from "@/components/public/PublicNavbar";
 import { HeroSection } from "@/components/public/HeroSection";
 import { ProductsSection } from "@/components/public/ProductsSection";
+import { CoursesSection } from "@/components/public/CoursesSection";
 import { ServicesSection } from "@/components/public/ServicesSection";
 import { AboutSection } from "@/components/public/AboutSection";
 import { PhilosophySection } from "@/components/public/PhilosophySection";
@@ -103,6 +104,7 @@ export function PublicWebsite() {
       <div id="page-content">
         <RevealSection><HeroSection /></RevealSection>
         <RevealSection><ProductsSection /></RevealSection>
+        <RevealSection><CoursesSection /></RevealSection>
         <RevealSection><ServicesSection /></RevealSection>
         <RevealSection><ProcessSection /></RevealSection>
         <RevealSection><AboutSection /></RevealSection>

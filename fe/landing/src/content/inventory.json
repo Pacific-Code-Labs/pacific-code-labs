@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-04T19:21:44.573Z",
+  "generatedAt": "2026-10-08T22:04:10.875Z",
   "counts": {
-    "nodes": 64,
-    "edges": 91
+    "nodes": 69,
+    "edges": 97
   },
   "nodes": [
     {
@@ -53,6 +53,13 @@
       "type": "component",
       "group": "public",
       "path": "src/components/public/ContactSection.tsx"
+    },
+    {
+      "id": "components/public/CoursesSection",
+      "label": "CoursesSection",
+      "type": "component",
+      "group": "public",
+      "path": "src/components/public/CoursesSection.tsx"
     },
     {
       "id": "components/public/FaqSection",
@@ -144,6 +151,13 @@
       "type": "content",
       "group": "core",
       "path": "src/content/caseStudies.json"
+    },
+    {
+      "id": "content/courses.json",
+      "label": "courses.json",
+      "type": "content",
+      "group": "core",
+      "path": "src/content/courses.json"
     },
     {
       "id": "content/faq.json",
@@ -377,6 +391,13 @@
       "path": "src/repositories/caseStudies.repository.ts"
     },
     {
+      "id": "repositories/courses.repository",
+      "label": "courses.repository",
+      "type": "repository",
+      "group": "core",
+      "path": "src/repositories/courses.repository.ts"
+    },
+    {
       "id": "repositories/inventory.repository",
       "label": "inventory.repository",
       "type": "repository",
@@ -389,6 +410,13 @@
       "type": "repository",
       "group": "core",
       "path": "src/repositories/media.repository.ts"
+    },
+    {
+      "id": "repositories/merge-published-document",
+      "label": "merge-published-document",
+      "type": "repository",
+      "group": "core",
+      "path": "src/repositories/merge-published-document.ts"
     },
     {
       "id": "repositories/products.repository",
@@ -424,6 +452,13 @@
       "type": "service",
       "group": "core",
       "path": "src/services/caseStudies.service.ts"
+    },
+    {
+      "id": "services/courses.service",
+      "label": "courses.service",
+      "type": "service",
+      "group": "core",
+      "path": "src/services/courses.service.ts"
     },
     {
       "id": "services/products.service",
@@ -533,6 +568,16 @@
     {
       "from": "components/public/ContactSection",
       "to": "lib/contact",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/CoursesSection",
+      "to": "content/courses.json",
+      "kind": "imports"
+    },
+    {
+      "from": "components/public/CoursesSection",
+      "to": "services/courses.service",
       "kind": "imports"
     },
     {
@@ -792,6 +837,11 @@
     },
     {
       "from": "pages/public/PublicWebsite",
+      "to": "components/public/CoursesSection",
+      "kind": "imports"
+    },
+    {
+      "from": "pages/public/PublicWebsite",
       "to": "components/public/FooterSection",
       "kind": "imports"
     },
@@ -856,6 +906,11 @@
       "kind": "imports"
     },
     {
+      "from": "repositories/courses.repository",
+      "to": "content/courses.json",
+      "kind": "imports"
+    },
+    {
       "from": "repositories/inventory.repository",
       "to": "content/inventory.json",
       "kind": "imports"
@@ -886,6 +941,11 @@
       "kind": "imports"
     },
     {
+      "from": "repositories/published-content",
+      "to": "repositories/merge-published-document",
+      "kind": "imports"
+    },
+    {
       "from": "repositories/services.repository",
       "to": "content/services.json",
       "kind": "imports"
@@ -898,6 +958,11 @@
     {
       "from": "services/caseStudies.service",
       "to": "repositories/caseStudies.repository",
+      "kind": "imports"
+    },
+    {
+      "from": "services/courses.service",
+      "to": "repositories/courses.repository",
       "kind": "imports"
     },
     {

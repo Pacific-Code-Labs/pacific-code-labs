@@ -12,6 +12,7 @@
 /** Section slugs in document order. Slug === path segment === element id. */
 export const SECTION_SLUGS = [
   "products",
+  "courses",
   "services",
   "how",
   "about",

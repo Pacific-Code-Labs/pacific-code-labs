@@ -22,6 +22,8 @@ The admin manages all public content and translations, logos/media, clients, pro
 
 Products use the canonical Tsuru, Sóköl and Ujtö̀ domains. Sóköl is marked coming soon. Shared tokens, components and flag icons are versioned in the design system.
 
+Courses are listed at `/es/courses` and `/en/courses`. The bilingual catalog in `fe/landing/src/content/courses.json` features Linux Lab, the renewed Linux and Git course at https://linux.jcampos.dev. Course entries use a stable ID, status, sort order, external URL and ES/EN copy. Older published snapshots retain the bundled courses navigation link and route metadata until the CMS includes them.
+
 ## Production deployment
 
 `environments/prod.env` contains nonsecret coordinates and selects AWS profile PACIFIC-PROD. Run `bash deploy-env.sh prod --plan` to inspect stages, or `bash deploy-env.sh prod` to deploy certificates, platform, styled invitations, backend, initial missing content and admin assets. Docker and AWS SAM are required for the image backend. Existing content is never overwritten by the seed. Individual stages are reusable scripts under `scripts/`. Landing changes deploy through this repository's GitHub Pages workflow.

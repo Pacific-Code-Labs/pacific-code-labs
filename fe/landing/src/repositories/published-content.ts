@@ -1,5 +1,6 @@
 import i18n from "../lib/i18n";
 import { initBrand } from "../lib/brand-theme";
+import { mergePublishedDocument } from "./merge-published-document";
 // These are the same module objects used by the typed entity repositories.
 // Keep bundled documents for immediate rendering; refresh in the background.
 const bundled = import.meta.glob("../content/*.json", {
@@ -36,7 +37,7 @@ function apply(snapshot: any): boolean {
     if (Array.isArray(target)) target.splice(0, target.length, ...incoming);
     else {
       for (const k of Object.keys(target)) delete target[k];
-      Object.assign(target, baseline[key], incoming);
+      Object.assign(target, baseline[key], mergePublishedDocument(key, baseline[key], incoming));
     }
   }
   for (const language of ["en", "es"])

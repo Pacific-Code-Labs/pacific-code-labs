@@ -1,0 +1,52 @@
+{
+  "title": {
+    "es": "Cursos",
+    "en": "Courses"
+  },
+  "subtitle": {
+    "es": "Aprende construyendo. Cursos prácticos para llevar tus ideas de la terminal al despliegue.",
+    "en": "Learn by building. Practical courses to take your ideas from the terminal to deployment."
+  },
+  "visitLabel": {
+    "es": "Explorar el curso",
+    "en": "Explore the course"
+  },
+  "items": [
+    {
+      "id": "linux-lab",
+      "status": "active",
+      "sortOrder": 1,
+      "externalUrl": "https://linux.jcampos.dev",
+      "translations": {
+        "es": {
+          "name": "Linux Lab",
+          "tagline": "De tus primeros comandos a tu primera aplicación en producción.",
+          "description": "El curso renovado de Linux y Git de Pacific Code Labs. Aprende a usar la terminal, versionar con Git y GitHub, construir una aplicación con React y Node.js y automatizar su publicación con CI/CD. Incluye lecciones bilingües, ejercicios y seguimiento de tu progreso.",
+          "badge": "Curso renovado",
+          "topics": [
+            "Fundamentos de Linux",
+            "Git y GitHub",
+            "React + Node.js",
+            "CI/CD con GitHub Pages",
+            "Seguridad del servidor"
+          ],
+          "note": "Estudia como invitado y guarda tu progreso en este dispositivo. Crea una cuenta para sincronizarlo y acceder a los laboratorios de Linux."
+        },
+        "en": {
+          "name": "Linux Lab",
+          "tagline": "From your first commands to your first production application.",
+          "description": "The renewed Linux and Git course from Pacific Code Labs. Learn the terminal, version control with Git and GitHub, build an application with React and Node.js, and automate publishing with CI/CD. Includes bilingual lessons, exercises and progress tracking.",
+          "badge": "Renewed course",
+          "topics": [
+            "Linux foundations",
+            "Git and GitHub",
+            "React + Node.js",
+            "CI/CD with GitHub Pages",
+            "Server security"
+          ],
+          "note": "Study as a guest and save your progress on this device. Create an account to sync it and access the Linux labs."
+        }
+      }
+    }
+  ]
+}

@@ -9,8 +9,16 @@
       }
     },
     {
-      "href": "/services",
+      "href": "/courses",
       "order": 2,
+      "label": {
+        "es": "Cursos",
+        "en": "Courses"
+      }
+    },
+    {
+      "href": "/services",
+      "order": 3,
       "label": {
         "es": "Servicios",
         "en": "Services"
@@ -18,7 +26,7 @@
     },
     {
       "href": "/how",
-      "order": 3,
+      "order": 4,
       "label": {
         "es": "Cómo trabajamos",
         "en": "How we work"
@@ -26,7 +34,7 @@
     },
     {
       "href": "/about",
-      "order": 4,
+      "order": 5,
       "label": {
         "es": "Nosotros",
         "en": "About"
@@ -34,7 +42,7 @@
     },
     {
       "href": "/philosophy",
-      "order": 5,
+      "order": 6,
       "label": {
         "es": "Filosofía",
         "en": "Philosophy"
@@ -42,7 +50,7 @@
     },
     {
       "href": "/case-studies",
-      "order": 6,
+      "order": 7,
       "label": {
         "es": "Casos de Éxito",
         "en": "Case Studies"
@@ -50,7 +58,7 @@
     },
     {
       "href": "/contact",
-      "order": 7,
+      "order": 8,
       "label": {
         "es": "Contacto",
         "en": "Contact"
