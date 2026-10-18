@@ -14,8 +14,7 @@ export function FooterSection() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <Logo size={28} />
-            <span className="text-[#475569] dark:text-white/60 text-sm">Pacific Code Labs</span>
+            <Logo size={48} showName nameClassName="text-[#475569] dark:text-white/60 text-sm" />
           </div>
 
           {/* Copyright */}

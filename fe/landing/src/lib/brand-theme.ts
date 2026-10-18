@@ -94,6 +94,9 @@ export function applyFavicon(ref: string | null | undefined): void {
     document.head.appendChild(link);
   }
   link.href = href;
+  // CMS uploads may use a different format or size than the bundled PNG.
+  link.removeAttribute("type");
+  link.removeAttribute("sizes");
 }
 
 /**

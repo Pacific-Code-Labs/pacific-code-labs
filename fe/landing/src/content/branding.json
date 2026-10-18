@@ -1,7 +1,9 @@
 {
-  "logoUrl": "/logo.png",
-  "logoUrlDark": "/logo-dark-bg.png",
-  "faviconUrl": "/logo.png",
+  "logoUrl": "/brand/logo/pcl_l3_symbol.png",
+  "logoUrlDark": "/brand/logo/pcl_l3_symbol.png",
+  "faviconUrl": "/brand/icons/favicon-32.png",
+  "wordmarkUrl": "/brand/logo/pcl_l1_primary.svg",
+  "wordmarkUrlDark": "/brand/logo/pcl_l2_reverse.svg",
   "companyName": "Pacific Code Labs",
   "tagline": {
     "es": "Tecnología construida en Costa Rica",

@@ -6,6 +6,20 @@ export function mergePublishedDocument(
   baseline: any,
   incoming: any,
 ): any {
+  // Keep new identity fields when loading older published documents. Migrate
+  // only the known default favicon paths; custom names and uploads still win.
+  if (key === "branding") {
+    const merged = { ...baseline, ...incoming };
+    const legacyFavicons = ["/logo.png", "/logo-dark-bg.png", "/brand/logo/pcl_l3_symbol.png"];
+    if (
+      merged.companyName === "Pacific Code Labs" &&
+      baseline.faviconUrl &&
+      legacyFavicons.includes(incoming?.faviconUrl)
+    ) {
+      merged.faviconUrl = baseline.faviconUrl;
+    }
+    return merged;
+  }
   if (key === "navigation" && Array.isArray(incoming.items)) {
     const courseLink = baseline.items?.find(
       (item: any) => item.href === "/courses",
@@ -27,7 +41,12 @@ export function mergePublishedDocument(
     }
   }
   if (key === "seo") {
-    return { ...incoming, pages: { ...baseline.pages, ...incoming.pages } };
+    const merged = { ...baseline, ...incoming, pages: { ...baseline.pages, ...incoming?.pages } };
+    const legacyImages = ["/opengraph.jpg", "opengraph.jpg", `${baseline.siteUrl?.replace(/\/$/, "")}/opengraph.jpg`];
+    if (merged.siteUrl === baseline.siteUrl && legacyImages.includes(incoming?.ogImageUrl)) {
+      merged.ogImageUrl = baseline.ogImageUrl;
+    }
+    return merged;
   }
   return incoming;
 }

@@ -36,10 +36,13 @@ async function main() {
 
   const SITE = (seo.siteUrl ?? "https://pacific-code-labs.jcampos.dev").replace(/\/$/, "");
   // OG image must be absolute — a local media path (e.g. "/media/og.jpg") is resolved against SITE.
-  const rawImage = seo.ogImageUrl ?? `${SITE}/opengraph.jpg`;
+  const rawImage = seo.ogImageUrl || "/brand/social/pcl_social_card_1200x630.png";
   const IMAGE = /^https?:\/\//i.test(rawImage)
     ? rawImage
     : SITE + (rawImage.startsWith("/") ? rawImage : `/${rawImage}`);
+  const imageExtension = IMAGE.split(/[?#]/)[0].split(".").pop()?.toLowerCase();
+  const IMAGE_TYPE = imageExtension === "png" ? "image/png"
+    : imageExtension === "jpg" || imageExtension === "jpeg" ? "image/jpeg" : "";
   const template = await fs.readFile(path.join(DIST, "index.html"), "utf8");
 
   // Route descriptors (language-agnostic). title/description are resolvers.
@@ -86,6 +89,9 @@ async function main() {
     html = replaceTag(html, /<meta property="og:title"[^>]*>/, `<meta property="og:title" content="${t}" />`);
     html = replaceTag(html, /<meta property="og:description"[^>]*>/, `<meta property="og:description" content="${d}" />`);
     html = replaceTag(html, /<meta property="og:url"[^>]*>/, `<meta property="og:url" content="${canonical}" />`);
+    html = replaceTag(html, /<meta property="og:image"[^>]*>/, `<meta property="og:image" content="${esc(IMAGE)}" />`);
+    html = replaceTag(html, /<meta property="og:image:secure_url"[^>]*>/, IMAGE.startsWith("https://") ? `<meta property="og:image:secure_url" content="${esc(IMAGE)}" />` : "");
+    html = replaceTag(html, /<meta property="og:image:type"[^>]*>/, IMAGE_TYPE ? `<meta property="og:image:type" content="${IMAGE_TYPE}" />` : "");
     html = replaceTag(html, /<meta property="og:locale"[^>]*>/, `<meta property="og:locale" content="${lang === "es" ? "es_CR" : "en_US"}" />`);
     html = replaceTag(
       html,
@@ -94,6 +100,7 @@ async function main() {
     );
     html = replaceTag(html, /<meta name="twitter:title"[^>]*>/, `<meta name="twitter:title" content="${t}" />`);
     html = replaceTag(html, /<meta name="twitter:description"[^>]*>/, `<meta name="twitter:description" content="${d}" />`);
+    html = replaceTag(html, /<meta name="twitter:image"[^>]*>/, `<meta name="twitter:image" content="${esc(IMAGE)}" />`);
 
     // hreflang alternates for this slug.
     const alternates = [

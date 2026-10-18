@@ -65,13 +65,15 @@ export function PublicNavbar() {
       data-testid="public-navbar"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href={localizedPath(lang)} className="flex items-center gap-2 shrink-0">
-            <Logo size={36} />
-            <span className="text-[#0F172A] dark:text-white font-semibold tracking-tight text-sm sm:text-base">
-              Pacific Code Labs
-            </span>
+            <Logo
+              size={48}
+              dark={dark}
+              showName
+              nameClassName="text-[#0F172A] dark:text-white font-semibold tracking-tight text-sm sm:text-base"
+            />
           </Link>
 
           {/* Desktop nav */}

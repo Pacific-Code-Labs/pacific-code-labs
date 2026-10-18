@@ -42,7 +42,7 @@ function slugOf(path: string): string {
 export function resolveSeo(path: string, lang: Lang): HeadMeta {
   const slug = slugOf(path);
   // OG/Twitter need an absolute URL — a local media path is resolved against the site URL.
-  const image = seoData.ogImageUrl ? absoluteAssetUrl(seoData.ogImageUrl) : `${SITE}/opengraph.jpg`;
+  const image = absoluteAssetUrl(seoData.ogImageUrl || "/brand/social/pcl_social_card_1200x630.png");
   const canonical = SITE + localizedPath(lang, slug);
 
   // Per-language alternates + x-default (default language).
@@ -120,6 +120,11 @@ export function useHeadTags(meta: HeadMeta, lang: Lang) {
     upsertMeta("property", "og:url", meta.canonical);
     upsertMeta("property", "og:locale", lang === "es" ? "es_CR" : "en_US");
     upsertMeta("property", "og:image", meta.image);
+    upsertMeta("property", "og:image:secure_url", meta.image?.startsWith("https://") ? meta.image : null);
+    const imageExtension = meta.image?.split(/[?#]/)[0].split(".").pop()?.toLowerCase();
+    const imageType = imageExtension === "png" ? "image/png"
+      : imageExtension === "jpg" || imageExtension === "jpeg" ? "image/jpeg" : null;
+    upsertMeta("property", "og:image:type", imageType);
     upsertMeta("name", "twitter:title", meta.title);
     upsertMeta("name", "twitter:description", meta.description);
     upsertMeta("name", "twitter:image", meta.image);
